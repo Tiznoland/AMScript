@@ -12,7 +12,7 @@ sudo apt-get --assume-yes install software-properties-common
 
 wait
 
-sudo add-apt-repository --assume-yes ppa:honeynet/nightly
+sudo add-apt-repository ppa:honeynet/nightly
 
 wait
 
