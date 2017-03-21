@@ -1,0 +1,31 @@
+#!/bin/bash
+
+sudo apt-get --assume-yes update
+
+wait
+
+sudo apt-get --assume-yes upgrade
+
+wait
+
+sudo apt-get --assume-yes install software-properties-common
+
+wait
+
+sudo add-apt-repository --assume-yes ppa:honeynet/nightly
+
+wait
+
+sudo apt-get --assume-yes update
+
+wait
+
+sudo apt-get --assume-yes install dionaea
+
+wait
+
+cp /opt/dionaea/etc/dionaea/ihandlers-available/log_json.yaml /opt/dionaea/etc/dionaea/ihandlers-enabled
+
+wait
+
+echo "Do: sudo service dionaea start"
