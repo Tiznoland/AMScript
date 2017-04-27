@@ -41,7 +41,7 @@ def first():
 	os.system("sudo add-apt-repository ppa:honeynet/nightly -y")
 	os.system("sudo apt-get update -y")
 	os.system("sudo apt-get --assume-yes install dionaea")
-	os.system("cp /opt/dionaea/etc/dionaea/ihandlers-available/log_json.yaml /opt/dionaea/etc/dionaea/ihandlers-enabled")
+	os.system("sudo cp /opt/dionaea/etc/dionaea/ihandlers-available/log_json.yaml /opt/dionaea/etc/dionaea/ihandlers-enabled")
 
 
 def second():
