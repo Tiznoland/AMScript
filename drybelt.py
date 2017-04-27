@@ -59,7 +59,7 @@ def third():
 
 def fourth():
 	print("You have chosen to run the dashboard server")
-	os.system("sudo java -jar /var/metabase/metabas.jar")
+	os.system("sudo java -jar /var/metabase/metabase.jar")
 
 def fifth():
 	os.system("clear")
@@ -69,7 +69,6 @@ def fifth():
 def main():
 	showBanner()
 	showOptions()
-	print(platform.platform())
 	while(True):
 		input = raw_input("Choose an option:[1-5] ")
 		input = input.split()
