@@ -66,8 +66,8 @@ def fifth():
 
 def main():
 	while(True):
-		showBanner()
-		showOptions()
+		#showBanner()
+		#showOptions()
 		input = raw_input("Choose an option:[1-5] ")
 		input = input.split()
 		if input[0] == '1':
