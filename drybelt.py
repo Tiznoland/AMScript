@@ -59,7 +59,7 @@ def third():
 
 def fourth():
 	print("You have chosen to run the dashboard server")
-	os.system("java -jar /var/metabase/metabas.jar")
+	os.system("sudo java -jar /var/metabase/metabas.jar")
 
 def fifth():
 	os.system("clear")
