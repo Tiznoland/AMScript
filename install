@@ -1,31 +1,48 @@
 #!/bin/bash
+clear
+echo " "
+echo "DDDDDDDDD     RRRRRRRR    YYYY        YYYY    BBBBBBBB     EEEEEEEE   LLLL     TTTTTTTTTTTT"
+echo "DDDDDDDDDD    RRRRRRRRR    YYYY      YYYY     BBBBBBBBB    EEEEEEEE   LLLL     TTTTTTTTTTTT"
+echo "DDDD   DDDD   RRRR  RRRR    YYYY    YYYY      BBBB  BBBB   EEEE       LLLL     TTTTTTTTTTTT  "
+echo "DDDD    DDDD  RRRR   RRRR    YYYY  YYYY       BBBB   BBBB  EEEE       LLLL         TTTT"
+echo "DDDD     DDDD RRRR  RRRR      YYYYYYYY        BBBBBBBBBB   EEEEEE     LLLL         TTTT"
+echo "DDDD    DDDD  RRRRRRRRR        YYYYYY         BBBB   BBBB  EEEE       LLLL         TTTT"
+echo "DDDD   DDDD   RRRRRRRR          YYYY          BBBB  BBBB   EEEE       LLLL         TTTT"
+echo "DDDDDDDDDD    RRRR RRRR         YYYY          BBBBBBBBB    EEEEEEEE   LLLLLLLL     TTTT"
+echo "DDDDDDDD      RRRR  RRRR        YYYY          BBBBBBBB     EEEEEEEE   LLLLLLLL     TTTT"
+echo " "
+echo " "
+echo "By Karel Sels"
+echo " "
+echo " "
+echo " "
+echo "Options:"
+echo "1. Install dionaea honeypot"
+echo "2. Install dashboard"
+echo "3. Run dionaea honeypot"
+echo "4. Run dashboard"
+echo "5. Exit"
 
-sudo apt-get --assume-yes update
-
-wait
-
-sudo apt-get --assume-yes upgrade
-
-wait
-
-sudo apt-get --assume-yes install software-properties-common
-
-wait
-
-sudo add-apt-repository ppa:honeynet/nightly
-
-wait
-
-sudo apt-get --assume-yes update
-
-wait
-
-sudo apt-get --assume-yes install dionaea
-
-wait
-
-cp /opt/dionaea/etc/dionaea/ihandlers-available/log_json.yaml /opt/dionaea/etc/dionaea/ihandlers-enabled
-
-wait
-
-echo "Do: sudo service dionaea start"
+while true; do
+	read -p "Choose an option:[1-5] " option
+	case $option in
+		[1]* ) echo "Install dionaea";;
+		[2]* ) echo "Install dashboard";;
+		[3]* ) echo "Run dionaea";;
+		[4]* ) echo "Run dashboard";;
+		[5]* ) echo "Bye Bye"; break;;
+		* ) echo "This is not an option, please choose one of these"
+			echo "1. Install dionaea honeypot"
+			echo "2. Install dashboard"
+			echo "3. Run dionaea honeypot"
+			echo "4. Run dashboard"
+			echo "5. Exit";;
+	esac
+done
+#sudo apt-get update -y
+#sudo apt-get upgrade -y
+#sudo apt-get -y install software-properties-common
+#sudo add-apt-repository ppa:honeynet/nightly -y
+#sudo apt-get update -y
+#sudo apt-get --assume-yes install dionaea
+#cp /opt/dionaea/etc/dionaea/ihandlers-available/log_json.yaml /opt/dionaea/etc/dionaea/ihandlers-enabled
