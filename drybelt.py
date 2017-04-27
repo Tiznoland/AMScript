@@ -50,7 +50,7 @@ def second():
 	os.system("sudo add-apt-repository -y ppa:webupd8team/java")
 	os.system("sudo apt-get update -y")
 	os.system("sudo apt-get -y install oracle-java8-installer")
-	os.system('sudo wget -O /var/metabase "http://downloads.metabase.com/v0.23.1/metabase.jar"')
+	os.system('sudo wget -O /var/metabase/metabase.jar "http://downloads.metabase.com/v0.23.1/metabase.jar"')
 	main()
 
 def third():
