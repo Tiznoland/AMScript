@@ -50,7 +50,7 @@ def second():
 	os.system("sudo apt-get update -y")
 	os.system("sudo apt-get -y install oracle-java8-installer")
 	os.system("sudo mkdir /var/metabase")
-	os.system('sudo wget -O /var/metabase/ "http://downloads.metabase.com/v0.23.1/metabase.jar"')
+	os.system('sudo wget -O /var/metabase/metabase.jar "http://downloads.metabase.com/v0.23.1/metabase.jar"')
 
 def third():
 	print("You have chosen to run the dionaea honeypot")
@@ -61,7 +61,6 @@ def fourth():
 	os.system("sudo java -jar /var/metabase/metabase.jar")
 
 def fifth():
-	os.system("clear")
 	showBanner()
 	print("Bye Bye")
 
