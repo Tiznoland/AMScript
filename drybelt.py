@@ -42,7 +42,6 @@ def first():
 	os.system("sudo apt-get update -y")
 	os.system("sudo apt-get --assume-yes install dionaea")
 	os.system("sudo cp /opt/dionaea/etc/dionaea/ihandlers-available/log_json.yaml /opt/dionaea/etc/dionaea/ihandlers-enabled")
-	main()
 
 
 def second():
@@ -50,8 +49,8 @@ def second():
 	os.system("sudo add-apt-repository -y ppa:webupd8team/java")
 	os.system("sudo apt-get update -y")
 	os.system("sudo apt-get -y install oracle-java8-installer")
-	os.system('sudo wget -O /var/metabase/metabase.jar "http://downloads.metabase.com/v0.23.1/metabase.jar"')
-	main()
+	os.system("sudo mkdir /var/metabase")
+	os.system('sudo wget -O /var/metabase/ "http://downloads.metabase.com/v0.23.1/metabase.jar"')
 
 def third():
 	print("You have chosen to run the dionaea honeypot")
@@ -67,9 +66,9 @@ def fifth():
 	print("Bye Bye")
 
 def main():
-	showBanner()
-	showOptions()
 	while(True):
+		showBanner()
+		showOptions()
 		input = raw_input("Choose an option:[1-5] ")
 		input = input.split()
 		if input[0] == '1':
