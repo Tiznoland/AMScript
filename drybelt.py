@@ -42,10 +42,16 @@ def first():
 	os.system("sudo apt-get update -y")
 	os.system("sudo apt-get --assume-yes install dionaea")
 	os.system("sudo cp /opt/dionaea/etc/dionaea/ihandlers-available/log_json.yaml /opt/dionaea/etc/dionaea/ihandlers-enabled")
+	main()
 
 
 def second():
 	print("You have chosen to install the dashboard")
+	os.system("sudo add-apt-repository -y ppa:webupd8team/java")
+	os.system("sudo apt-get update -y")
+	os.system("sudo apt-get -y install oracle-java8-installer")
+	os.system('sudo wget -O /var/metabase "http://downloads.metabase.com/v0.23.1/metabase.jar"')
+	main()
 
 def third():
 	print("You have chosen to run the dionaea honeypot")
@@ -53,6 +59,7 @@ def third():
 
 def fourth():
 	print("You have chosen to run the dashboard server")
+	os.system("java -jar /var/metabase/metabas.jar")
 
 def fifth():
 	os.system("clear")
